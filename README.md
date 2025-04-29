@@ -30,7 +30,7 @@
 
   <h3> Passos </h3>
     <h4> 1. Clone o repositório </h4>
-      <ul><li>git clone https://github.com/ISLYLGM/Biblioteca.git</li></ul>
+      <ul><li>git clone https://github.com/ISLYLGM/BibliotecaAPI.git</li></ul>
     <h4> 2. Acesse a pasta do projeto </h4>
       <ul><li>cd nome-da-pasta</li></ul>
     <h4> 3. Restaure os pacotes </h4>
