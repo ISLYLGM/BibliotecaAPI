@@ -33,6 +33,9 @@ Console.WriteLine(">>> Diretório atual da API: " + Directory.GetCurrentDirector
 
 app.UseCors();
 
+app.UseDefaultFiles(); //direciona para o index.html
+app.UseStaticFiles(); // arquivos estáticos da pasta wwwroot
+
 app.MapControllers();
 
 app.Run();
