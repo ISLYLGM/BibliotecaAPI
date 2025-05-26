@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca-API", "Biblioteca-API.csproj", "{A8C470FD-67FD-1359-B188-DE0F9DD5320C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API.csproj", "{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,19 +10,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A8C470FD-67FD-1359-B188-DE0F9DD5320C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8C470FD-67FD-1359-B188-DE0F9DD5320C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8C470FD-67FD-1359-B188-DE0F9DD5320C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8C470FD-67FD-1359-B188-DE0F9DD5320C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD:Biblioteca-API/Biblioteca-API.sln
 <<<<<<< HEAD
 		SolutionGuid = {EE0A2863-91F3-4F19-A599-7A2D397682F6}
 =======
 		SolutionGuid = {AA177975-0261-4900-8CE7-57FB589A6710}
 >>>>>>> 070e9182105287780ffca13f8847c9421375f1da
+=======
+		SolutionGuid = {B33704C6-0FDF-40AB-B040-C1BBA6E96115}
+>>>>>>> 342e169800fe9ad4e5ddca27d3acf9f55d2d208c:API/API.sln
 	EndGlobalSection
 EndGlobal
