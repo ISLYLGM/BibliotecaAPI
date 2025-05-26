@@ -19,14 +19,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-<<<<<<< HEAD:Biblioteca-API/Biblioteca-API.sln
-<<<<<<< HEAD
-		SolutionGuid = {EE0A2863-91F3-4F19-A599-7A2D397682F6}
-=======
-		SolutionGuid = {AA177975-0261-4900-8CE7-57FB589A6710}
->>>>>>> 070e9182105287780ffca13f8847c9421375f1da
-=======
 		SolutionGuid = {B33704C6-0FDF-40AB-B040-C1BBA6E96115}
->>>>>>> 342e169800fe9ad4e5ddca27d3acf9f55d2d208c:API/API.sln
 	EndGlobalSection
 EndGlobal
