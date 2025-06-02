@@ -1,23 +1,134 @@
+/* Fonte moderna e neutra */
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eef2f7;
   margin: 30px;
-  background: #f8f8f8;
+  color: #222;
+  line-height: 1.5;
 }
 
-h1, h2 {
-  color: #333;
+/* Centralizar o conteúdo e limitar a largura */
+body > h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
-form {
+/* Cabeçalhos das seções */
+h2 {
+  color: #34495e;
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 8px;
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 
-input, button {
-  padding: 8px;
-  margin: 5px;
+/* Container geral dos formulários */
+form {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  max-width: 500px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+/* Inputs e botões alinhados verticalmente */
+input, button {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1.5px solid #ccc;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Foco no input */
+input:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 6px rgba(41, 128, 185, 0.4);
+}
+
+/* Botão principal */
+button {
+  background-color: #2980b9;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1c5980;
+}
+
+/* Lista de livros */
+ul#listaLivros {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  padding-left: 0;
+}
+
+ul#listaLivros li {
+  background: white;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Botão excluir dentro da lista */
+ul#listaLivros li button {
+  width: auto;
+  background-color: #e74c3c;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  margin-left: 15px;
+  transition: background-color 0.3s ease;
+}
+
+ul#listaLivros li button:hover {
+  background-color: #c0392b;
+}
+
+/* Textos de instrução */
+p {
+  font-size: 0.9rem;
+  color: #2980b9;
+  margin: 10px 0 8px 0;
+}
+
+/* Resultado da busca */
+#resultadoBusca {
+  max-width: 500px;
+  margin: 15px auto 40px auto;
+  background: #dff0d8;
+  border: 1px solid #d0e9c6;
+  color: #3c763d;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#resultadoBusca p {
+  margin: 0;
+}
+
+/* Mensagem de erro na busca */
+#resultadoBusca p[style*="color:red"] {
+  background: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
 }

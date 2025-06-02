@@ -11,7 +11,7 @@ async function carregarLivros() {
 
   livros.forEach(livro => {
     const item = document.createElement("li");
-    item.textContent = `${livro.titulo} - ${livro.autor} (R$ ${livro.preco})`;
+    item.textContent = `[${livro.id}] ${livro.titulo} - ${livro.autor} (R$ ${livro.preco})`;
 
     // Botão de excluir
     const botaoExcluir = document.createElement("button");
@@ -63,3 +63,65 @@ document.getElementById("livroForm").addEventListener("submit", async function (
     alert("Erro ao adicionar livro.");
   }
 });
+
+//Função para editar os livros
+
+document.getElementById("editarLivro").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const id = parseInt(document.getElementById("idEditar").value);
+  const titulo = document.getElementById("tituloEditar").value;
+  const autor = document.getElementById("autorEditar").value;
+  const preco = parseFloat(document.getElementById("precoEditar").value);
+
+  const livroEditado = { id, titulo, autor, preco };
+
+  try {
+    const resposta = await fetch(`${API_URL}/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(livroEditado)
+    });
+
+    if (resposta.ok) {
+      alert("Livro editado com sucesso!");
+      carregarLivros();
+      document.getElementById("editarLivro").reset();
+    } else if (resposta.status === 404) {
+      alert("Livro não encontrado para edição.");
+    } else {
+      alert("Erro ao editar livro.");
+    }
+  } catch (error) {
+    alert("Erro de conexão: " + error.message);
+  }
+}); 
+
+//GET por ID
+
+document.getElementById("buscarLivroForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const id = parseInt(document.getElementById("id").value);
+  const resultadoDiv = document.getElementById("resultadoBusca");
+  resultadoDiv.innerHTML = ""; // Limpa resultado anterior
+
+  try {
+    const resposta = await fetch(`${API_URL}/${id}`);
+
+    if (resposta.ok) {
+      const livro = await resposta.json();
+      resultadoDiv.innerHTML = `
+        <p><strong></strong>[${livro.id}] ${livro.titulo} - ${livro.autor} (R$${livro.preco})</p>
+      
+      `;
+    } else if (resposta.status === 404) {
+      resultadoDiv.innerHTML = `<p style="color:red;">Livro não encontrado.</p>`;
+    } else {
+      resultadoDiv.innerHTML = `<p style="color:red;">Erro ao buscar livro.</p>`;
+    }
+  } catch (error) {
+    resultadoDiv.innerHTML = `<p style="color:red;">Erro de conexão: ${error.message}</p>`;
+  }
+});
+

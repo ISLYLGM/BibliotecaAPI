@@ -16,6 +16,28 @@
     <button type="submit">Adicionar Livro</button>
   </form>
 
+  <h2>Buscar Livro</h2>
+  <p>Digite o ID do livro que deseja buscar</p>
+
+  <form id="buscarLivroForm">
+    <input type="number" id="id" placeholder="Id" required />
+    <button type="submit">Buscar Livro</button>
+  </form>
+
+  <div id="resultadoBusca"></div>
+
+  <h2>Editar Livro</h2>
+
+  <form id="editarLivro">
+    <p>Digite o Id do livro que deseja editar</p>
+    <input type="number" id="idEditar" placeholder="Id" required />
+    <p>Digite os dados a serem editados</p>
+    <input type="text" id="tituloEditar" placeholder="Título" required />
+    <input type="text" id="autorEditar" placeholder="Autor" required />
+    <input type="number" id="precoEditar" placeholder="Preço" step="0.01" required />
+    <button type="submit">Editar Livro</button>
+  </form> 
+
   <h2>Lista de Livros:</h2>
   <ul id="listaLivros"></ul>
 
